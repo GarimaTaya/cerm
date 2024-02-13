@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap.css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--Font awesome.css-->
+    <link rel="stylesheet" href="css/all.min.css">
+
+<!--Google font-->   
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+<!--Custom CSS-->
+<link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/department.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  </head>
+  <body>    
+      
+    <input type="checkbox" id="check">
+    <!--header area start-->
+    <header>
+      
+      <div class="right_area">
+      </div>
+        
+        <nav class="navbar navbar-expand-sm navbar-dark pl-5 fixed-top">
+  <a class="navbar-brand" href="index.html">CERM</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav custom-nav pl-5">
+     <li class ="nav-item custom-nav-item"><a href="index.html"class="nav-link">Home</a></li>
+     <li class ="nav-item custom-nav-item"><a href="department.html"class="nav-link">Department</a></li>
+     <li class ="nav-item custom-nav-item"><a href="#"class="nav-link">Contact</a></li>
+     <li class ="nav-item custom-nav-item"><a href="signup.html"class="nav-link">Registration</a></li>
+     <li class ="nav-item custom-nav-item"><a href="login1.html" class="nav-link">Login</a></li>
+    </ul>
+  </div>
+</nav>
+    </header>
+    <!--header area end-->
+    <!--sidebar start-->
+
+  
+      <div class="bg-img">
+         <img src="images/pic-login.jpg"  width="100%" height="100%">
+         <div class="login-content">
+            <h1>Department details</h1>
+            <form action="adddept.jsp" method="post" >
+                
+                <div class="field">
+                  <input type="text" name="deptnm" required placeholder="Department name">
+               </div>
+                
+                <div class="field">
+                    <select name="depttype" id="department" class="form-control">
+                        <option >Select department</option>
+                        <option value=1>government</option>
+                        <option value=2>NGO</option>
+                        <option value=3>Semi-government</option>
+                        <option value=4>private</option>
+                    </select>
+               </div>
+                
+                <div class="field">
+                    <select name="state" id="state" class="form-control">
+                        <option >Select state</option>
+                        <option value=1>Andhra Pradesh</option>
+                        <option value=2>Andaman and Nicobar Islands</option>
+                        <option value=3>Arunachal Pradesh</option>
+                        <option value=4>Assam</option>
+                        <option value=5>Bihar</option>
+                        <option value=6>Chandigarh</option>
+                        <option value=7>Chhattisgarh</option>
+                        <option value=8>Dadar and Nagar Haveli</option>
+                        <option value=9>Daman and Diu</option>
+                        <option value=10>Delhi</option>
+                        <option value=11>Lakshadweep</option>
+                        <option value=12>Puducherry</option>
+                        <option value=13>Goa</option>
+                        <option value=14>Gujarat</option>
+                        <option value=15>Haryana</option>
+                        <option value=16>Himachal Pradesh</option>
+                        <option value=17>Jammu and Kashmir</option>
+                        <option value=18>Jharkhand</option>
+                        <option value=19>Karnataka</option>
+                        <option value=20>Kerala</option>
+                        <option value=21>Madhya Pradesh</option>
+                        <option value=22>Maharashtra</option>
+                        <option value=23>Manipur</option>
+                        <option value=24>Meghalaya</option>
+                        <option value=25>Mizoram</option>
+                        <option value=26>Nagaland</option>
+                        <option value=27>Odisha</option>
+                        <option value=28>Punjab</option>
+                        <option value=29>Rajasthan</option>
+                        <option value=30>Sikkim</option>
+                        <option value=31>Tamil Nadu</option>
+                        <option value=32>Telangana</option>
+                        <option value=33>Tripura</option>
+                        <option value=34>Uttar Pradesh</option>
+                        <option value=35>Uttarakhand</option>
+                        <option value=36>West Bengal</option>
+                        </select>
+               </div>
+                
+                <div class="field">
+                  <input type="text" id="hdnm" name="hdnm" required placeholder="Department Head name">
+               </div>
+                
+                
+                  <div class="field">
+                  <input type="date" required placeholder="Enter date">
+               </div>
+                
+                
+              
+                 
+                 <div class="field">
+                  <input type="submit" value="Submit" href="proj.html">
+               </div>
+                
+            </form>
+            
+             <div class="field">
+               <button onclick="window.location.href='project.html'" class="block"> ADD PROJECT DETAILS</button>
+               </div>
+            
+             <div class="field">
+               <button onclick="window.location.href='user-details.html'" class="block"> ADD USER</button>
+               </div>
+         </div>
+         
+          
+         
+          
+       <div class="bottom" style="background: grey;">
+         © 2022 Copyright: <a href=""> Compucom</a>
+          </div>
+         
+       </div>   
+          
+      <script>
+         const pass_field = document.querySelector('.pass-key');
+         const showBtn = document.querySelector('.show');
+         showBtn.addEventListener('click', function(){
+          if(pass_field.type === "password"){
+            pass_field.type = "text";
+            showBtn.textContent = "HIDE";
+            showBtn.style.color = "#3498db";
+          }else{
+            pass_field.type = "password";
+            showBtn.textContent = "SHOW";
+            showBtn.style.color = "#222";
+          }
+         });
+      </script>
+      
+      <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.min.js"></script>
+   </body>
+</html>
+

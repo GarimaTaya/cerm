@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--Bootstrap.css-->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!--Font awesome.css-->
+   <link rel="stylesheet" href="css/all.min.css">
+
+<!--Google font-->   
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+<!--Custom CSS-->
+<link rel="stylesheet" href="css/style.css">
+    <title>Admin</title>    
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  </head>
+  <body>
+
+   <input type="checkbox" id="check">
+    <!--header area start-->
+    
+      <header >
+      <div class="right_area">
+      </div> 
+      
+</header>  
+        <nav class="navbar navbar-expand-sm navbar-dark pl-5 fixed-top">
+  <a class="navbar-brand" href="index.html">E-vault</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav custom-nav pl-5">
+     <li class ="nav-item custom-nav-item"><a href="index.html"class="nav-link">Home</a></li>
+     <li class ="nav-item custom-nav-item"><a href="department.html"class="nav-link">Department</a></li>
+     
+     <li class ="nav-item custom-nav-item"><a href="#"class="nav-link">Contact</a></li>
+     <li class ="nav-item custom-nav-item"><a href="signup.html"class="nav-link">Register</a></li>
+     <li class ="nav-item custom-nav-item"><a href="login1.html" class="nav-link">Login</a></li>
+    </ul>
+  </div>
+</nav>
+    
+
+      <div class="bg-img">
+         <img src="images/pic-sign.jpg" width="100%" height="100%">
+         <div class="reg-content">
+            <h1>ADD USER</h1>
+            <form name="myform" action="user_reg.jsp" method="post" onsubmit="return validate()">
+               <div class="field">
+                  <span class="fa fa-user"></span>
+                  <input type="text" name="fname" required placeholder="Enter Name">
+               </div>
+
+               <div class="field">
+                <span class="fa fa-envelope"></span>
+                <input type="email" name="email" required placeholder="Enter Email">
+             </div>
+
+             <div class="field">
+                <span class="fa fa-phone"></span>
+                <input type="tel"  name="tel" required placeholder="Enter Phone number" pattern="^\(7\d|8\d|9\d)\d{9}$">
+             </div>
+             
+             <div class="field">
+               <span class="fa fa-calendar"></span>
+               <input type="date" name="date" required placeholder="Enter date of birth">
+            </div>
+             
+              
+               <div class="field">
+                  <input type="submit" value="SUBMIT">
+                  <input type="reset" value="CLEAR">
+               </div>
+              
+               
+            </form>
+            
+      </div>
+
+      <div class="bottom" style="background: grey;">
+         © 2022 Copyright: <a href=""> Compucom</a>
+          </div>
+         
+       </div>   
+
+      
+
+      <script type="text/javascript">
+         function validate()
+         {
+            var first=document.forms["myform"]["fname"].value;
+            var email=document.forms["myform"]["email"].value;
+            var tel=document.forms["myform"]["tel"].value;
+            var date=document.forms["myform"]["date"].value;
+
+            if(first == "")
+            { 
+               alert("enter  Name");
+               return false;
+            }
+
+            if(!isNaN(first))
+            { 
+               alert("Name should be in character");
+               return false;
+            }
+
+
+
+            var at = email.indexOf("@");
+           var dot = email.lastIndexOf(".");
+
+           if(at<1||dot<at+2||dot+2 >= email.length)
+            {
+               alert("Not a valid Email")
+               return false;
+            }
+
+            
+            if(tel == "")
+            { 
+               alert("enter  Phone no");
+               return false;
+
+           }
+
+           if(isNaN(tel))
+            { 
+               alert(" Phone no should be in digit");
+               return false;
+            } 
+
+            if(tel.length!=10)
+            {
+               alert("must be a 10 digit no");
+               return false;
+            }
+
+
+            if(date == "")
+            { 
+               alert("enter  Date");
+               return false;
+
+           }
+
+         
+
+         }
+      </script>
+   </body>
+</html>
