@@ -16,7 +16,7 @@ The Centralized e-Document Repository Management (CERM) system is a web-based ap
 - Web Server: Apache Tomcat
 
 ## Installation
-1. Clone the repository:
+1. Clone the repository:https://github.com/GarimaTaya/cerm.git
 
  2. Set up MySQL database:
 - Create a new database named 'cerm' and import the provided SQL dump file (`cerm_database.sql`).
